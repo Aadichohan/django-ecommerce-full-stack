@@ -32,8 +32,10 @@ def userList(request):
     print(user_list)
     return render(request, 'user/user_list.html', {'user_list': user_list})
 
-def userEdit(request, id):
-    user_detail = get_object_or_404(User, pk=id)
-    # user_list = list(user_list)
-    # print(user_list)
-    return render(request, 'user/edit_user.html', {'user_detail': user_detail})
+def userEdit(request, id= None):
+    if request.method == "GET":
+        user_detail = get_object_or_404(User, pk=id)
+        return render(request, 'user/edit_user.html', {'user': user_detail})
+    elif request.method == "POST":
+        print(request.body)
+        return HttpResponse('Post')
