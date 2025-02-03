@@ -1,0 +1,55 @@
+  .login-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f7f7f7;
+  }
+
+  .login-card {
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: white;
+  }
+
+  .login-card h4 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+  }
+
+  .btn-custom {
+      background-color: #007bff;
+      color: white;
+      border-radius: 25px;
+  }
+
+  .btn-custom:hover {
+      background-color: #0056b3;
+  }
+
+  .forgot-password {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 15px;
+  }
+
+  .forgot-password a {
+      color: #007bff;
+      text-decoration: none;
+  }
+
+  .forgot-password a:hover {
+      text-decoration: underline;
+  }
+
+  /* Add responsiveness for smaller screens */
+  @media (max-width: 575px) {
+      .login-card {
+          padding: 20px;
+      }
+  }
